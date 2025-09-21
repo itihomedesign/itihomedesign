@@ -1,0 +1,2685 @@
+/* Stiluri de bază pentru body */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 25px;
+  margin: 0;
+  background-color: #ab9540;
+  color: #333;
+  line-height: 1.6;
+  text-align: start;
+  
+}
+
+.submenu-icon {
+  margin-left: 0px;
+  font-size: 1em;
+  color: #000000;
+}
+
+
+main {
+    padding: 0em;
+}
+
+
+
+/* BARA TEXTE CONTACT DEASUPRA HEADER*/
+.topbar {
+  background:rgb(0,0,0,0.8);
+  color: #e4c000;
+  display: flex;
+  justify-content:center;
+  gap: 10em;
+  padding: 0;
+  font-size: 0.6em;
+  font-family: Arial, sans-serif;
+  border-bottom: 0px solid #000;
+  position: fixed;
+  z-index: 10;
+  height: fit-content;
+  width:100%;
+  
+}
+
+/* Contact items (responsive design support) */
+.contact-item {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .topbar {
+    flex-direction: row;
+    gap: 1em;
+    font-size: 0.6rem;
+    padding: 0.5em;
+    align-items: center;
+  }
+
+  .contact-item {
+    justify-content: center;
+  }
+}
+
+
+/* FINAL BARA TEXTE CONTACT DEASUPRA HEADER*/
+
+
+
+
+
+/* HEADER FULL (SVG+LOGO) + SUBMENIU*/
+/* Pozitionare meniu header */
+/* Reset global */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f0f2f5;
+}
+
+/* Header */
+header {
+  background: linear-gradient(191deg,
+    rgba(228, 192, 0, 0.9) 10%,
+    rgba(228, 192, 51, 0.9) 4%,
+    rgba(219, 190, 22, 0.9) 28%,
+    rgba(240, 216, 79, 0.9) 21%,
+    rgba(255, 219, 15, 0.9) 56%,
+    rgba(228, 192, 0, 0.9) 52%,
+    rgba(186, 171, 82, 0.9) 76%,
+    rgba(228, 192, 0, 0.9) 71%);
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  color: #000;
+  margin-top: 0.9em;
+  height: fit-content;
+}
+
+/* Meniu principal */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  text-align: center;
+  text-transform: uppercase;
+  background: transparent;
+  border-radius: 10px;
+  margin-top: 0.5em;
+}
+
+/* Linkuri meniu principal */
+nav a {
+  text-decoration: none;
+  font-family: 'Arial', sans-serif;
+  font-weight: 550;
+  font-size: 1.2rem;
+  color: #000;
+  border-radius: 10px;
+  background: transparent;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover + Focus pentru linkuri meniu */
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+nav a:focus {
+  outline: 3px solid rgb(228, 192, 0);
+}
+
+/* Submeniu */
+.main-menu li {
+  position: relative;
+}
+
+.main-menu > li > a {
+  padding: 0.4em;
+  display: block;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: rgba(229, 192, 0, 0.8);
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  padding: 0.25em 1em;
+  list-style: none;
+  z-index: 1000;
+  white-space: nowrap;
+  width: max-content;
+  transition: all 0.3s ease;
+  margin-top: 0em;
+}
+
+.submenu li {
+  text-align: right;
+  margin:0.1em;
+}
+
+.submenu li a {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: lighter;
+  padding: 0.5em;
+  color: #333;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.submenu li a:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #000;
+}
+
+/* Afișare submeniu la hover */
+.main-menu li:hover .submenu {
+  display: block;
+}
+
+.submenu-desc {
+  display: block;
+  font-size: 0.85em;
+  color: #666;
+  margin-top: 2px;
+  line-height: 1.3;
+  text-transform: lowercase;
+  
+}
+
+
+/* Stil pentru butonul hamburger */
+#menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  align-self: flex-end;
+  margin:0.25em 0.4em 0em 2em;
+}
+
+/* Imaginea logo */
+header img {
+  width: 2.5em;
+  margin-left: 0.5em;
+}
+/* Grupare logo + svg */
+.logo-contact {
+display: flex;
+align-items: flex-start;
+margin-top: 0.2em;
+}
+/* SVG-urile una sub alta, la 20px distanță față de logo */
+.svg-icons {
+flex-direction: column;
+margin-left: 0.2em;
+position: relative;
+display: inline-block;
+}
+.svg-icons svg {
+margin-top: 0.6em; /* spațiu între svg-uri */
+background: transparent;
+border-radius: 10px;
+padding: 0.1em;
+transition: background-color 0.3s ease, transform 0.3s ease;
+cursor: pointer;
+border: 0px solid transparent;
+}
+.svg-icons svg:hover {
+background-color: rgba(255, 255, 255, 0.5);
+transform: scale(1.1);
+}
+/* Efect pentru imaginea logo */
+.link-imagine img {
+background-color: linear-gradient(116deg,rgba(228, 192, 0, 1) 7%, rgba(224, 209, 119, 1) 48%, rgba(191, 172, 63, 1) 78%);
+border-radius: 10px;
+padding: 5px;
+transition: background-color 0.3s ease, transform 0.3s ease;
+cursor: pointer;
+border: 0px solid transparent
+}
+.link-imagine img:hover {
+background-color: rgba(255, 255, 255, 0.5);
+transform: scale(1.05);
+}
+
+/* Afișare doar pe mobil */
+@media (max-width: 768px) {
+  #menu-toggle {
+  display: block;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #000;
+  border-radius: 10px;
+  box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1);
+  
+  position: absolute; /* 🔑 cheia problemei */
+  align-self: center;
+  top:0.1em;
+  right:0.1em;
+  z-index: 1001;
+}
+
+
+  nav {
+    display: none;
+    width: 100%;
+    animation: slideDown 0.3s ease forwards;
+  }
+
+  nav.active {
+    display: block;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0.5em;
+    background: transparent;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 0 0 10px 10px;
+    gap: 0.5em;
+  }
+
+  .main-menu > li > a {
+    padding: 0.8em 1.2em;
+    font-size: 1.3rem;
+    color: #000;
+    width: 100%;
+    display: block;
+    transition: background 0.3s, color 0.3s;
+  }
+
+  .main-menu > li > a:hover {
+    background-color: #f4f4f4;
+    color: #d4a800;
+    border-radius: 30px;
+  }
+
+  .submenu {
+    position: static;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    margin-left: 1em;
+    display: none;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .main-menu li:hover .submenu {
+    display: flex;
+  }
+
+  .submenu li a {
+    padding: 0.4em 1.5em;
+    font-size: 1rem;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* Animatie de aparitie */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+/*FINAL HEADER FULL (SVG+LOGO) + SUBEMNIU */
+
+
+/*  fundal LINIE text titlu h1 linie aurie */
+
+.full-width-box {
+  position: relative; /* Asigurăm că linia poate fi plasată sub text */
+  width: 100%; /* Lățimea să fie pe toată pagina */
+  border-radius: 0px;
+  height: auto;
+}
+.full-width-box h1 {
+  margin-top: 1em; /* Elimină marginile implicite */
+  margin-bottom: 2em;
+  padding-bottom: 1em; /* Adăugăm puțin spațiu sub text */
+  font-size:rem; /* Setează dimensiunea textului */
+  line-height: 1.2; /* Ajustează înălțimea liniei */ ;
+  background-color:linear ;
+}
+.full-width-box:after {
+  content: '';
+  position: absolute;
+  bottom: -1em; /* Plasează dreptunghiul 1px sub text */
+  left: 0;
+  width: 100%;
+  height: 1.2em; /* Înălțimea dreptunghiului */
+  background: linear-gradient(26deg,rgba(228, 192, 0, 1) 10%, rgba(228, 192, 51, 1) 4%, rgba(219, 190, 22, 1) 37%, rgba(240, 216, 79, 1) 32%, rgba(255, 219, 15, 1) 60%, rgba(228, 192, 0, 1) 51%, rgba(186, 171, 82, 1) 76%, rgba(228, 192, 0, 1) 71%);
+  border-radius:0px;
+}
+/*  FINAL fundal text titlu h1 linie aurie */
+
+   
+/* AFISARE POP UP MESAJ CU NR SI MAIL IN HEADER  */
+   .tooltip-container {
+    position: relative;
+    display: inline-block;
+    margin: 0px;
+  }
+  .tooltip-container svg {
+    cursor: pointer;
+  }
+  .tooltip-text {
+  visibility: hidden;
+  opacity: 0;
+  width: max-content;
+  background-color: #000;
+  color: #f0f2f5;
+  text-align: center;
+  padding: 6px 10px;
+  border-radius: 10px;
+  position: absolute;
+  z-index: 1;
+  top: 90%; /* Apare sub SVG, nu deasupra */
+  left: 100%;
+  transform: translateX(-50%);
+  transition: opacity 0.2s ease-in-out;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+  .tooltip-container:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+  }
+ /* FINAL AFISARE POP UP MESAJ CU NR SI MAIL IN HEADER  */
+
+
+/* daca nu e asta poza de fundal se repeta nu urmareste scrollul */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 10vh;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url('imagini/poza50_background.jpg'), url('imagini/poza51_background.jpg'), url('imagini/poza46_background.jpg'), url('imagini/poza48_background.jpg'), url('imagini/poza47_background.jpg');
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* SLIDESHOW ARTICOLE ACASA.HTML */
+
+.section {
+  height: fit-content;
+  padding: 0.5em ;
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.content {
+  padding: 0;
+  text-align: center;
+}
+
+/* Wrapper-ul caruselului */
+.carousel-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 0.2em;
+  margin-left: auto;
+  margin-bottom: 4em;
+  padding: 0.5em 4em 0.5em 4em ;
+  background: rgba(229, 192, 0, 0.6); /* alb cu opacitate 60% */
+  backdrop-filter: blur(8px); /* opțional, pentru efect de „glassmorphism” */
+  -webkit-backdrop-filter: blur(8px); /* pentru Safari */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* contur fin, opțional */
+}
+
+/* Fundal dreptunghi carusel */
+
+
+/* Container carusel */
+.carousel-container {
+  width: 100%;
+  max-width: fit-content;
+  margin: 0 auto;
+  position: relative;
+  overflow: visible;
+  z-index: 1;
+}
+
+/* Carusel */
+.carousel {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+}
+
+/* Articole individuale */
+.article {
+  flex: 0 0 20%;
+  box-sizing: border-box;
+  padding: 0.3em;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  position: relative;
+  height: 17em;
+  transition: transform 0.3s ease;
+}
+
+.article img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border 0.4s ease;
+}
+
+.article:hover img {
+  transform: scale(1.06);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  border: 3px solid white;
+}
+
+.article h3 {
+  position: absolute;
+  bottom: 0.5em;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 0.3em 0.5em;
+  border-radius: 10px;
+  font-size: 1rem;
+  width: 85%;
+  text-align: center;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.85);
+  pointer-events: none;
+}
+
+.carousel-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+  margin-top: 0.5em;
+  z-index: 2;
+  position: relative;
+}
+
+button.prev1,
+button.next1 {
+  padding: 0.6em 1.2em;
+  font-size: 1.2rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #e5c000;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  position: static;
+}
+
+button.prev1:hover,
+button.next1:hover {
+  background-color: rgba(255, 215, 0, 0.7); /* flash auriu subtil */
+  color: black;
+}
+
+/* ✅ Stiluri responsive pentru telefoane */
+@media (max-width: 768px) {
+  .carousel-wrapper {
+    padding: 0.5em 1em;
+  }
+
+button.prev1,
+button.next1 {
+  display: none;
+}
+
+  .article {
+    flex: 0 0 80%; /* arată un articol pe ecran mic */
+    height: 15em;
+  }
+
+  .article h3 {
+    font-size: 0.9rem;
+    padding: 0.2em 0.4em;
+  }
+
+  .carousel {
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .article {
+    scroll-snap-align: center;
+  }
+
+  .carousel-container {
+    max-width: 100%;
+  }
+
+  .carousel-controls {
+    margin-top: 1em;
+  }
+
+}
+
+/* FINAL SLIDESHOW ARTICOLE ACASA.HTML */
+
+
+/* shortcut index "Despre Noi" */
+.layout-container11 {
+  display: flex;
+  gap: 2em;
+  padding: 2em;
+  align-items: center;
+  flex-wrap: wrap;
+  background: linear-gradient(
+  100deg,
+  rgba(255, 255, 255, 0.6) 60%,  /* alb cu opacitate 60% */
+  rgba(228, 192, 0, 0.8) 92%,    /* auriu cu opacitate 80% */
+  rgba(228, 192, 0, 0.8) 100%    /* auriu complet */);
+  backdrop-filter: blur(8px); /* opțional, pentru efect de „glassmorphism” */
+  -webkit-backdrop-filter: blur(8px); /* pentru Safari */
+  margin-bottom: 2em;
+}
+
+/* Secțiune imagine */
+.image-section11 {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.3); /* alb cu 30% opacitate */
+  padding: 1em 1em 1em 1em;
+  border-radius: 10px;
+}
+
+.image-wrapper11 {
+  max-width: 300px;
+  text-align: center;
+}
+
+.image-title11 {
+  font-size: 3.5rem;
+  margin-bottom: 0.5em;
+}
+
+.image-subtitle11 {
+  font-size: 1.1rem;
+  margin-bottom: 1em;
+}
+
+
+.image-caption11 {
+  margin-top: 0.8em;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Secțiune texte */
+.text-blocks-section11 {
+  flex: 2;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 pe rând */
+  gap: 1.5em;
+}
+
+.text-block11 {
+  background: linear-gradient(90deg,rgba(255, 255, 255, 1) 0%, rgba(228, 192, 0, 1) 100%);
+  padding: 1.5em;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.text-block11:hover {
+  transform: translateY(-5px);
+}
+
+.text-title11 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+}
+
+.text-description11 {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .layout-container11 {
+    flex-direction: column-reverse;
+    gap: 1.5em;
+    padding: 1em;
+  }
+
+  .image-section11,
+  .text-blocks-section11 {
+    width: 100%;
+  }
+
+  .text-blocks-section11 {
+    grid-template-columns: 1fr; /* 1 pe rând */
+  }
+
+  .image-wrapper11 {
+    max-width: 100%;
+  }
+
+  .image-title11 {
+    font-size: 2.2rem;
+  }
+
+  .image-subtitle11 {
+    font-size: 1rem;
+  }
+
+  .text-title11 {
+    font-size: 1.1rem;
+  }
+
+  .text-description11 {
+    font-size: 1rem;
+  }
+}
+
+/*FINAL shortcut index "Despre Noi"*/
+
+
+/*SHORTCUT APARTAMENTE INDEX.HTML  */
+.layout-container22 {
+  display: flex;
+  flex-direction: row-reverse; /* imaginea în dreapta */
+  gap: 2em;
+  padding: 2em;
+  align-items: center;
+  flex-wrap: wrap;
+  background: linear-gradient(
+  270deg,
+  rgba(255, 255, 255, 0.6) 60%,   /* alb cu 60% opacitate */
+  rgba(228, 192, 0, 0.6) 92%,     /* auriu cu 60% opacitate */
+  rgba(228, 192, 0, 0.6) 100%     /* auriu cu 60% opacitate */);
+  backdrop-filter: blur(8px); /* opțional, pentru efect de „glassmorphism” */
+  -webkit-backdrop-filter: blur(8px); /* pentru Safari */
+  margin-bottom: 2em;
+}
+
+/* Secțiune imagine + text */
+.image-section22 {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.3); /* alb cu 30% opacitate */
+  padding: 1em 1em 1em 1em;
+  border-radius: 10px;
+}
+
+.image-wrapper22 {
+  max-width: 300px;
+  text-align: center;
+}
+
+.image-title22 {
+  font-size: 3.5rem;
+  margin-bottom: 0.5em;
+}
+
+.image-subtitle22 {
+  font-size: 1.1rem;
+  margin-bottom: 1em;
+}
+
+
+
+.image-caption22 {
+  margin-top: 0.8em;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Secțiune articole */
+.articles-section22 {
+  flex: 2;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 pe rând */
+  gap: 1.5em;
+}
+
+.article-card22 {
+  background-color: #f9f9f9;
+  padding: 1.5em;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+
+.article-title22 {
+  font-size: 1.4rem;
+  margin-bottom: 0.6em;
+}
+
+.article-text22 {
+  font-size: 1.1rem;
+  margin-bottom: 1em;
+}
+
+/* ✅ Responsive pentru telefoane */
+@media (max-width: 768px) {
+  .layout-container22 {
+    flex-direction: column-reverse;
+    padding: 1em;
+    gap: 1em;
+  }
+
+  .articles-section22 {
+    grid-template-columns: 1fr; /* doar o coloană */
+  }
+
+  .image-title22 {
+    font-size: 2rem;
+  }
+
+  .image-subtitle22 {
+    font-size: 1rem;
+  }
+
+  .image-caption22 {
+    font-size: 0.9rem;
+  }
+
+  .article-title22 {
+    font-size: 1.2rem;
+  }
+
+  .article-text22 {
+    font-size: 1rem;
+  }
+}
+
+/*FINAL SHORTCUT APARTAMENTE INDEX.HTML  */
+
+
+/* SHORTCUT SERVICII.HTML INDEX */
+.main-layout {
+  display: flex;
+  flex-direction: row-reverse; /* inversăm ordinea: imaginea în dreapta */
+  gap: 2em;
+  padding: 2em;
+  align-items: center; /* aliniază imaginea pe verticală cu cardurile */
+  flex-wrap: wrap;
+  background: linear-gradient(
+  100deg,
+  rgba(255, 255, 255, 0.6) 60%,   /* alb cu 60% opacitate */
+  rgba(228, 192, 0, 0.6) 92%,     /* auriu cu 60% opacitate */
+  rgba(228, 192, 0, 0.6) 100%     /* auriu cu 60% opacitate */);
+  backdrop-filter: blur(8px); /* opțional, pentru efect de „glassmorphism” */
+  -webkit-backdrop-filter: blur(8px); /* pentru Safari */
+  margin-bottom: 2em;
+}
+
+/* Stânga: imagine și text */
+.left-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.3); /* alb cu 30% opacitate */
+  padding: 1em 1em 1em 1em;
+  border-radius: 10px;
+}
+
+.left-content {
+  max-width: 300px;
+  text-align: center;
+}
+
+.image-title {
+  font-size: 3.5rem;
+  margin-bottom: 0.5em;
+}
+
+.image-description {
+  font-size: 1.1rem;
+  margin-bottom: 1em;
+}
+
+
+
+.image-caption {
+  margin-top: 0.8em;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Dreapta: carduri */
+.right-section {
+  flex: 2;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 pe rând */
+  gap: 1em;
+}
+
+.card0 {
+  padding: 1em;
+  border-radius: 10px;
+  background: linear-gradient(270deg,rgba(250, 242, 0, 1) 0%, rgba(228, 192, 0, 1) 100%);
+  backdrop-filter: blur(8px); /* opțional, pentru efect de „glassmorphism” */
+  -webkit-backdrop-filter: blur(8px); /* pentru Safari */
+    
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.content0 {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  color: #000;
+}
+
+.heading0 {
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.para0 {
+  font-size: 1.1rem;
+  line-height: 1.2;
+}
+
+/* ✅ Responsive pentru telefoane */
+@media (max-width: 768px) {
+  .main-layout {
+    flex-direction: column;
+    padding: 1em;
+    gap: 1em;
+  }
+
+  .right-section {
+    grid-template-columns: 1fr; /* un singur card pe rând */
+  }
+
+  .image-title {
+    font-size: 2.2rem;
+  }
+
+  .image-description,
+  .image-caption,
+  .para0 {
+    font-size: 1rem;
+  }
+
+  .heading0 {
+    font-size: 1.2rem;
+  }
+}
+/*FINAL SHORTCUT SERVICI.HTML INDEX */
+
+
+
+/*shortcut index.html "Contact" formular de contact fix  */
+/* Container principal */
+.layout-container44 {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 2em;
+  padding: 2em;
+  align-items: flex-start;
+  flex-wrap: wrap;
+ background: linear-gradient(
+  270deg,
+  rgba(255, 255, 255, 0.6) 30%,   /* alb cu 60% opacitate */
+  rgba(228, 192, 0, 0.6) 92%,     /* auriu cu 60% opacitate */
+  rgba(228, 192, 0, 0.6) 100%     /* auriu cu 60% opacitate */);
+  backdrop-filter: blur(8px); /* opțional, pentru efect de „glassmorphism” */
+  -webkit-backdrop-filter: blur(8px); /* pentru Safari */
+}
+
+/* Formular de contact modal*/
+.modal44 {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content44 {
+  background-color: #fff;
+  margin: 5% auto;
+  padding: 1em;
+  border-radius: 10px;
+  width: 50%;
+  position: relative;
+}
+
+.close-button44 {
+  position: absolute;
+  top: 0em; 
+  right: 1em;
+  font-size: 1.5em;
+  color: #000;
+  cursor: pointer;
+}
+
+.open-modal-button {
+  position: relative;
+  padding: 0.25em 0.5em;
+  background-color: #000;
+  color: gold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 1em;
+  margin-left: auto;
+  flex-shrink: 0; /* PREVINE contractarea */
+  white-space: nowrap; /* PREVINE întinderea pe mai multe linii */
+}
+
+
+.open-modal-button:hover {
+  background-color: #333;
+}
+
+/* ✅ Responsive pentru telefoane */
+@media (max-width: 48em) {
+  .layout-container44 {
+    flex-direction: column;
+    padding: 0.2em;
+    gap: 1em;
+  }
+
+  .modal-content44 {
+    width:95%;
+    margin-top: 30%;
+    padding: 0.1em;
+  }
+
+  .open-modal-button {
+    display: block;
+    margin: 1em auto;
+    font-size: 0.6rem;
+    padding: 1em 1em;
+  }
+
+  .close-button44 {
+    font-size: 1.3em;
+    top: 0.3em;
+    right: 0.8em;
+  }
+}
+
+
+
+/*FINAL Formular de contact MODAL */
+
+
+/* Formular de contact */
+.contact-form-section44 {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-form44 {
+  width: 100%;
+  background-color: #f9f9f9;
+  padding: 2em;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-title44 {
+  font-size: 1.8rem;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+.form-label44 {
+  display: block;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+}
+
+.form-input44,
+.form-textarea44 {
+  width: 100%;
+  padding: 0.75em;
+  margin-bottom: 1em;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.form-textarea44 {
+  resize: vertical;
+  height: 150px;
+}
+
+.form-button44 {
+  display: block;
+  width: 100%;
+  padding: 0.75em;
+  background-color: #000;
+  color: gold;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-button44:hover {
+  background-color: #333;
+}
+
+/* Secțiune imagine */
+.image-section44 {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.3); /* alb cu 30% opacitate */
+  padding: 1em 1em 1em 1em;
+  border-radius: 10px;
+}
+
+.image-wrapper44 {
+  max-width: 400px;
+  text-align: center;
+}
+
+.image-title44 {
+  font-size: 3.5rem;
+  margin-bottom: 0.5em;
+}
+
+.image-subtitle44 {
+  font-size: 1.1rem;
+  margin-bottom: 1em;
+}
+
+
+.image-caption44 {
+  margin-top: 0.8em;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .layout-container44 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-form-section44,
+  .image-section44 {
+    width: 100%;
+  }
+
+  .contact-form44 {
+    max-width: 100%;
+  }
+
+  .image-wrapper44 {
+    max-width: 100%;
+  }
+}
+/*FINAL shortcut index.html "Contact" formular de contact  */
+
+
+
+/* STYLING TEXT POZA (STANGA DREAPTA) DESPRE.html */
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius:10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  gap: 3em;
+  
+}
+
+
+.row.text-right {
+  flex-direction: row;
+  background: linear-gradient(90deg,rgba(255, 255, 255, 0.0) 50%, rgba(228, 192, 0, 0.9) 90%, rgba(228, 192, 0, 0.9) 0%);
+  backdrop-filter: blur(8px); /* pentru Safari */
+}
+
+.row.text-left {
+  flex-direction: row-reverse;
+  background: linear-gradient(270deg,rgba(255, 255, 255, 0.0) 50%, rgba(228, 192, 0, 0.9) 90%, rgba(228, 192, 0, 0.9) 0%);
+ backdrop-filter: blur(8px); /* pentru Safari */
+}
+
+.text {
+  flex: 1;
+  max-width: 60%;
+  padding: 20px;
+  font-size: 1.5rem;
+  line-height: 1.75;
+  color: #444;
+  text-align: justify;
+}
+
+.image {
+  width: 30%;
+  height: 15em;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 0 0px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+/*FINAL STYLING TEXT POZA (STANGA DREAPTA) DESPRE.html */
+
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column-reverse !important;
+    padding: 1em;
+    gap: 1em;
+    margin-bottom: 2em;
+  }
+
+  .text {
+    max-width: 100%;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: left;
+    padding: 0.5em;
+  }
+
+  .image {
+    width: 100%;
+    height: auto;
+    max-height: 15em;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+}
+
+
+/* Slideshow-uri DESPRE.html*/
+/* Container grid centrat */
+  .slideshow-wrapper {
+    display: flex;
+    justify-content: center;
+   }
+  .slideshow-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1em;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    max-width: 50%;
+    width: 100%;
+    padding: 1em 1em;
+   }
+  /* Container individual slideshow */
+  .slideshow-container {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    background-color: #ddd;
+  }
+  .slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: fadeIn 1s ease-in-out;
+  }
+  /* Animare fade */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  /* Butoane navigare */
+  /* BUTOANE SLIDESHOW DESPRE.HTML */
+  .prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #333;
+  color: rgb(0, 0, 0);
+  border: none;
+  font-size: 1rem;                                        /* BUTOANE SLIDESHOW DESPRE.HTML */
+  padding: 1em 1em;
+  cursor: pointer;
+  z-index: 2;
+}
+.prev { left: 0; }
+.next { right: 0; }
+/* BUTOANE SLIDESHOW DESPRE.HTML */ 
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  .prev {
+    left: 1em;
+  }
+  .next {
+    right: 1em;
+  }
+.slideshow-background-wrapper {
+  position: relative;
+  width: 100%;
+  z-index: 0;
+  margin-top: 0em;
+}
+.slideshow-background {
+  position: absolute;
+  padding: 0px 0px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(229, 192, 0, 0.6); /* alb cu opacitate 60% */
+  backdrop-filter: blur(8px); /* opțional, pentru efect de „glassmorphism” */
+  -webkit-backdrop-filter: blur(8px); /* pentru Safari */
+   z-index: -1;
+  border-radius: 0px;
+}
+/* Responsive */
+ @media (max-width: 768px) {
+  .slideshow-grid {
+    max-width: 95%;
+    padding: 0.5em;
+    gap: 0.7em;
+  }
+
+  .slideshow-container {
+    aspect-ratio: 16 / 9;
+    border-radius: 10px;
+  }
+
+  .prev, .next {
+    font-size: 0.9rem;
+    padding: 0.6em;
+  }
+
+  .prev {
+    left: 0.5em;
+  }
+
+  .next {
+    right: 0.5em;
+  }
+}
+
+/*FINAL Slideshow-uri DESPRE.HTML*/
+
+
+
+ /* SLIDESHOW-URI POP-UP PORTOFOLIU.HTML    (culoare fundal toate paginile in afara de Acasa) */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(228, 192, 0);
+}   
+.container {
+    text-align: left;
+    margin-bottom: 3em;
+    background: rgba(229, 192, 0, 0.6); /* alb cu opacitate 60% */
+  backdrop-filter: blur(8px); /* opțional, pentru efect de „glassmorphism” */
+  -webkit-backdrop-filter: blur(8px); /* pentru Safari */
+    padding: 0.5em 3em 0.5em 3em;
+    margin-top: 1em;
+}
+.title-box h2 {
+    font-size: 2rem;
+    align-items: center;
+    margin-bottom: 0.5em;
+    }
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.5em;
+    max-width: fit-content;
+    margin:  auto;
+}
+.image-container {
+    position: relative;
+    cursor: pointer;
+}
+.image-container img {
+    width: 100%;
+    height: 15em;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+.image-container:hover img {
+    transform: scale(1.05);
+}
+.caption {
+    position: center;
+    bottom: 0em;
+    left: 0em;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0em;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    text-align: center;
+}
+button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.close-slideshow {
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute; /* sau fixed, dacă vrei să fie mereu vizibilă în colțul ecranului */
+    top: 0.5em;
+    right: 7em;
+}
+
+.close-slideshow:hover {
+    color: #e4c000;
+    
+}
+.slideshow-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+    padding-top:0; /* Spațiu de sus pentru a nu fi imaginea lipită de top */
+    justify-content: center; /* Centrează modalul pe orizontală */
+    align-items: center; /* Centrează modalul pe verticală */
+}
+.slideshow-content {
+    max-width: 80%; /* Fereastra de slideshow va ocupa maxim 80% din lățimea ecranului */
+    max-height: 80%; /* Fereastra de slideshow va ocupa maxim 80% din înălțimea ecranului */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3em; /* Adăugăm un mic padding pentru a evita ca imaginea să fie prea aproape de margini */
+}
+.slideshow-content img {
+    width: auto; /* Lățimea se va ajusta în funcție de înălțimea imaginii */
+    max-width: 80%; /* Asigurăm că imaginea nu va depăși lățimea containerului */
+    max-height: 80%; /* Limităm înălțimea imaginii la 70% din înălțimea ecranului */
+    margin: 0 auto; /* Centrăm imaginea pe orizontală */
+    display: block;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1em;
+  }
+
+  .title-box h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr); /* 2 imagini pe rând */
+    gap: 0.8em;
+  }
+
+  .image-container img {
+    height: 10em;
+  }
+
+  .caption {
+    font-size: 1rem;
+    padding: 0.3em;
+  }
+
+  .slideshow-content {
+    padding: 1em;
+    max-width: 95%;
+    max-height: 90%;
+  }
+
+  .slideshow-content img {
+    max-width: 100%;
+    max-height: 80vh;
+  }
+
+  .close-slideshow {
+    right: 1em;
+    top: 0.5em;
+    font-size: 2rem;
+  }
+}
+
+
+/*FINAL  SLIDESHOW-URI POP-UP PORTOFOLIU.HTML    (culoare fundal toate paginile in afara de Acasa) */
+
+
+/* COLOANE APARTAMENTE CASE BIROURI PORTOFOLIU.html */
+.section-wrapper99 {
+  padding: 60px 40px;
+  max-width:100%;
+  margin: auto;
+  margin-top: 2em;
+  background: rgba(229, 192, 0, 0.6); /* alb cu opacitate 60% */
+  backdrop-filter: blur(8px); /* opțional, pentru efect de „glassmorphism” */
+  -webkit-backdrop-filter: blur(8px); /* pentru Safari */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* contur fin, opțional */
+}
+
+.card-link99 {
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+}
+
+.section-header99 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-header99 h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.section-header99 p {
+  color: #666;
+  font-size: 18px;
+}
+
+.columns99 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  justify-content: center;
+  background: transparent; /* alb cu opacitate 60% */
+  padding: 0em;
+  border-radius: 10px;
+}
+
+.column99 {
+  background: rgba(255, 255, 255, 0.6); /* alb cu opacitate 60% */
+  backdrop-filter: blur(8px); /* opțional, pentru efect de „glassmorphism” */
+  -webkit-backdrop-filter: blur(8px); /* pentru Safari */
+  border: 1px solid rgba(0, 0, 0, 0.3); /* contur fin, opțional */
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  flex: 1;
+  min-width:30%;
+  max-width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap:1em
+}
+
+.column99 h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5em;
+  color: #222;
+}
+
+
+.button99 {
+  display: inline-block;
+  margin-top: auto;
+  margin-bottom: 10px;
+  background-color: #000000;
+  color: #fff;
+  padding: 12px 20px;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.button99:hover {
+  background-color: #004d99;
+}
+
+@media (max-width: 768px) {
+  .section-wrapper99 {
+    padding: 2em 1em;
+  }
+
+  .section-header99 h2 {
+    font-size: 1.8rem;
+  }
+
+  .section-header99 p {
+    font-size: 1rem;
+  }
+
+  .columns99 {
+    flex-direction: column;
+    gap: 1.5em;
+  }
+
+  .column99 {
+    width: 100%;
+    min-width: 100%;
+    padding: 1em;
+  }
+
+  .column99 h3 {
+    font-size: 1.1rem;
+  }
+
+  .button99 {
+    font-size: 1rem;
+    padding: 10px 16px;
+  }
+}
+
+
+/* FINAL COLOANE APARTAMENTE CASE BIROURI PORTOFOLIU.html */
+
+/* Afișare BOX CU IMAGINE ,BUTON "vezi detalii" si text APARTAMENTE.html BIROURI.html CASE.html */
+.grid-articole {
+  margin-top: min(6%);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+  gap: 1.5em;
+  padding: 1em 1em;
+}
+.articol-card {
+  display: flex;
+  align-items: flex-start;
+  background: linear-gradient(116deg,rgba(228, 192, 0, 1) 7%, rgba(224, 209, 119, 1) 48%, rgba(191, 172, 63, 1) 78%);
+  border: 0px solid rgba(229, 192, 0, 0.9); /* Corectare valoare alpha */
+  border-radius: 10px;
+  padding:0.2em;
+  text-align: left;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  gap: 1em;
+  position: relative; /* Necesar pentru plasare absolută internă */
+}
+.articol-card img {
+  width: 10em;
+  height: 10em;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;
+  padding: 0.1em 0.1em;
+}
+.articol-content h1 {
+  flex: 1;
+}
+.articol-content h2 {
+  font-size: 1rem;
+  margin-bottom: 2%;
+ }
+.articol-content p {
+  font-size: 0.9rem;
+  margin-bottom: 0.3em;
+  color: #444;
+}
+.buton-articol {
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+  display: inline-block;
+  padding-block: 0.5rem;
+  padding-inline: 1.25rem;
+  color: #e4c000;
+  background-color: rgb(0, 0, 0);
+  gap: 10px;
+  font-weight: bold;
+  border: 0px solid #ffffff4d;
+  border-radius: 10px;
+  outline: none;
+  overflow: hidden;
+  font-size: 15px;
+  cursor: pointer;;
+}
+.buton-articol:hover::before {
+  animation: shine 1.5s ease-out infinite;
+}
+
+.buton-articol::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  background-image: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0) 70%
+  );
+  top: 0;
+  left: -100px;
+  opacity: 0.6;
+}
+
+@keyframes shine {
+  0% {
+    left: -100px;
+  }
+
+  60% {
+    left: 100%;
+  }
+
+  to {
+    left: 100%;
+  }
+}
+
+.extra-info {
+  font-size: 2rem;
+  color: #666;
+  margin-bottom: 2em;
+  overflow-wrap: break-word;
+  max-width: 100%;
+}
+
+@media (max-width: 600px) {
+  .grid-articole {
+    padding: 0.2em;
+    grid-template-columns: 1fr;
+    
+  }
+
+  .articol-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0.5em;
+  }
+
+  .articol-card img {
+  width: 10em;              /* dimensiune fixă pe lățime */
+  height: 10em;             /* dimensiune fixă pe înălțime */
+  object-fit: cover;         /* umple fără deformare */
+  border-radius: 10px;
+  flex-shrink: 0;
+  display: block;
+  padding: 0.5em;
+}
+
+  .articol-content h1,
+  .articol-content h2,
+  .articol-content p {
+    text-align: center;
+    text-align: justify;
+  }
+
+  .buton-articol {
+    position: static;
+    margin-top: 1em;
+  }
+}
+
+/* FINAL Afișare BOX CU IMAGINE ,BUTON "vezi detalii" si text APARTAMENTE.html BIROURI.html CASE.html */
+
+/* GRID SLIDESHOW PREZENTARE FIECARE APARTAMENT/CASA/BIROU ARTICOL1,2,3....HTML */
+.layout-apartament {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2em;
+  padding: 2em;
+  flex-wrap: wrap;
+}
+
+.text-articol {
+  flex: 1;
+  max-width: 40%;
+  margin-left: 1em;
+  background: linear-gradient(147deg,
+  rgba(228, 192, 0, 0.5) 0%,
+  rgba(255, 229, 0, 0.35) 17%,
+  rgba(240, 240, 240, 0.5) 25%,
+  rgba(228, 192, 0, 0.5) 74%);
+  padding: 1em;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Umbră soft */
+}
+
+.subtitlu {
+  font-weight: 700;
+  font-size: 1.2em;
+  display: inline-block;
+  margin-top: 0.3em;
+  color: #222;
+}
+
+
+.text-articol p {
+  font-size: 1.1rem;
+  line-height: 1.8em;
+  color: #333;
+  font-family: 'Segoe UI', sans-serif;
+ 
+}
+.galerie-foto {
+  flex: 1;
+  padding: 0em;
+  max-width: 60%;
+  overflow: hidden;
+  position: relative;
+  margin-right: 0em;
+  background: linear-gradient(135deg, gold, orange);
+  border-radius: 10px;
+  border: 0.1em solid transparent;
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+  background-image: 
+    linear-gradient(#222, #222),                      /* interior */
+    linear-gradient(214deg,rgba(228, 192, 0, 1) 0%, rgba(255, 229, 0, 1) 17%, rgba(240, 240, 240, 1) 25%, rgba(228, 192, 0, 1) 74%);/* bordură */
+}
+
+.galerie-imagini {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+.galerie-imagini img {
+  width: 10%;         /* Imaginile nu depășesc containerul */
+  max-height: 25em;   /* Ajustează înălțimea după preferință */
+  object-fit: contain;   /* Taie imaginea dacă e prea lată */
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+.butoane-galerie {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+.butoane-galerie button {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  padding:0.5em 1em;
+  font-size: 1.4rem;
+  cursor: pointer;
+  border-radius: 10%;
+}
+
+@media (max-width: 768px) {
+  .layout-apartament {
+    flex-direction: column-reverse;
+    padding: 1em;
+  }
+  .text-articol  {
+    max-width: 100%;
+    margin-left: 0; /* Fără margine în stânga */
+    margin-bottom: 1em;
+    padding: 0.5em 0.5em;
+  }
+
+.text-articol p {
+font-size: 0.9rem;
+}
+
+  .galerie-foto {
+    max-width: 100%;
+    margin-left: 0; /* Fără margine în stânga */
+    margin-bottom: 1em;
+    padding: 0em;
+  }
+  .galerie-foto {
+    margin-right: 0;
+  }
+  .galerie-imagini img {
+    width: 30%; 
+    max-height: 15em;
+  }
+  .butoane-galerie button {
+    font-size: 2rem;
+    padding: 0em 0em;
+  }
+}
+
+
+/* FINAL GRID SLIDESHOW PREZENTARE FIECARE APARTAMENT/CASA/BIROU ARTICOL1,2,3....HTML */
+
+/* 3 TEXTE CU SVG DEASUPRA SERVICII.HTML */
+.body-SERVICII {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 1em;
+      display: flex;
+      justify-content: center;
+    }
+
+.subtitlu-servicii {
+  text-align: left;
+  padding: 1em  1em;
+  font-size: 1.8rem;
+  color: #555;
+  font-style: italic;
+   background: rgba(229, 192, 0, 0.6);
+}
+
+     .container-SERVICII {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(18em, 1fr));
+      gap: 2em;
+      width: 100%;
+      padding: 2em 1em 2em 1em;
+       background: rgba(229, 192, 0, 0.6); /* alb cu opacitate 60% */
+      backdrop-filter: blur(8px); /* opțional, pentru efect de „glassmorphism” */
+      -webkit-backdrop-filter: blur(8px); /* pentru Safari */
+    }
+
+    .item-SERVICII {
+      text-align: center;
+      padding: 1em;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.6);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+      border:2px solid rgba(250, 242, 0, 1);
+
+    }
+
+    .item-SERVICII:hover {
+      transform: translateY(-5px);
+    }
+
+    .icon-SERVICII {
+      width:3.125em;
+      height: 3.125em;
+      margin-bottom: 1em;
+      fill: #4a90e2;
+    }
+
+    .titlu-SERVICII {
+      margin: 10px 0 10px;
+      font-size: 1.2rem;
+      color: #222;
+      text-align: justify,center;
+    }
+
+    .text-SERVICII {
+      font-size: 1rem;
+      color: #555;
+      margin: 0;
+      text-align: justify;
+    }
+
+
+    @media (max-width: 768px) {
+  .container-SERVICII {
+    grid-template-columns: 1fr !important; /* o singură coloană */
+    gap: 1.5em;
+    padding: 1em;
+  }
+
+  .subtitlu-servicii {
+    font-size: 1.2rem;
+    padding: 0.5em;
+    text-align: justify;
+  }
+
+  .item-SERVICII {
+    padding: 0.8em;
+  }
+
+  .titlu-SERVICII {
+    font-size: 1rem;
+  }
+
+  .text-SERVICII {
+    font-size: 0.95rem;
+    text-align: justify;
+  }
+
+  .icon-SERVICII {
+    width: 2.5em;
+    height: 2.5em;
+  }
+}
+
+
+/* FINAL 3 TEXTE CU SVG DEASUPRA SERVICII.HTML */
+
+
+
+
+
+
+
+
+/*PAGINI CONSULTANTA ZUGRAVELI PARDOSELI INSTALATII MOBILIER */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1em;
+  margin-top: 0em;
+  padding: 1em 5em 1em 5em;
+  background: rgba(229, 192, 0, 0.6); /* alb cu opacitate 60% */
+  backdrop-filter: blur(8px); /* opțional, pentru efect de „glassmorphism” */
+  -webkit-backdrop-filter: blur(8px); /* pentru Safari */
+  }
+
+  .card {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(8px); /* opțional, pentru efect de „glassmorphism” */
+  -webkit-backdrop-filter: blur(8px); /* pentru Safari */
+  padding: .4em;
+  border-radius: 10px;
+  border: 0.1em solid#ffff00;
+
+  }
+  
+
+/* Centrare pentru ultimul card dacă e singur pe rând */
+.card-container > .card:last-child:nth-child(odd):nth-last-child(1) {
+  grid-column: 1 / -1;
+  justify-self: center;
+  width: 50%;
+  border-radius: 10px;
+}
+
+.card-image {
+  width: 100%;
+  height: 5em;
+  border-radius: 10px;
+  overflow: hidden; /* Asigură-te că imaginea nu depășește conturul */
+  border-radius: 10px
+}
+  
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Asigură-te că imaginea umple complet containerul fără a distorsiona */
+  border-radius: 10px
+}
+
+.card-image:hover {
+  transform: scale(0.98);
+}
+
+.category {
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 200;
+  color: rgb(123, 46, 46);
+  padding: 0.2em
+   /* alb cu opacitate 60% */
+}
+
+.heading {
+  color: rgb(88, 87, 87);
+  padding: 1em;
+  font-size: 1.3rem;
+  border-radius: 10px;
+}
+
+
+@media (max-width: 768px) {
+  .card-container {
+    grid-template-columns: 1fr; /* o singură coloană pe mobil */
+    padding: 1em 1em; /* padding mai mic pe mobil */
+    gap: 1em;
+  }
+
+  /* Dacă vrei, ajustează dimensiunea ultimului card centrat */
+  .card-container > .card:last-child:nth-child(odd):nth-last-child(1) {
+    width: 100%; /* ocupa tot rândul */
+  }
+
+  .card {
+    padding: 0.2em;
+  }
+
+  .category {
+    font-size: 1.2rem;
+    text-align: justify;
+  }
+
+  .heading {
+    font-size: 1rem;
+    padding: 0.2em;
+  }
+
+  .card-image {
+    height: 2em; /* fă imaginea puțin mai mare pe mobil */
+  }
+}
+
+
+
+
+/*FINAL PAGINI ZUGRAVELI PARDOSELI INSTALATII MOBILIER */
+
+
+/* chenar contact */
+.contact-section9 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0em;
+  margin-top: 0em;
+  padding: 0.5em;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  margin-bottom: 2em;
+} 
+
+ .text-oferte9 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.card-container9 {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  margin-top: 1em;
+  margin-bottom: 0em;
+}
+
+.card9 {
+  width: 13em;
+  height: 8em;
+   background: linear-gradient(112deg,rgba(228, 192, 0, 1) 10%, rgba(228, 192, 51, 1) 4%, rgba(219, 190, 22, 1) 28%, rgba(240, 216, 79, 1) 21%, rgba(255, 219, 15, 1) 56%, rgba(228, 192, 0, 1) 52%, rgba(186, 171, 82, 1) 76%, rgba(228, 192, 0, 1) 71%);
+  border-radius: 10px;
+  transition: border-radius 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.shadow9 {
+  box-shadow: inset 0 -3em 3em rgba(0,0,0,0.1),
+              0 0  0 2px rgb(190, 190, 190),
+              0.3em 0.3em 1em rgba(0,0,0,0.3);
+}
+
+.card-content9 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold; /* sau 600, 700 pentru diferite grosimi */
+}
+
+.icon9 {
+  margin-bottom: 12px;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .contact-section9 {
+    padding: 0.5em;
+    margin-top: 0.5em;
+  }
+
+  .text-oferte9 {
+    font-size: 1.5rem;
+  }
+
+   .card-container9 {
+    flex-direction: column; /* schimbă layout-ul pe verticală */
+    gap: 1em; /* păstrează distanța între carduri */
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+
+  .card9 {
+    width: 14em; /* cardurile să ocupe aproape toată lățimea ecranului */
+    height: 8em; /* lăsăm înălțimea să se ajusteze după conținut */
+  }
+
+  .icon9 {
+    margin-bottom: 8px;
+    font-size: 1.5rem; /* iconițele să fie puțin mai mici */
+  }
+}
+/* final chenar contact */
+
+
+/* BANNER SVG-uri-curaj pasiune excelenta */
+.banner-cu-texte {
+  width: 100%;
+  height: fit-content;
+  padding: 1em;
+  background: linear-gradient(26deg,rgba(228, 192, 0, 1) 10%, rgba(228, 192, 51, 1) 4%, rgba(219, 190, 22, 1) 37%, rgba(240, 216, 79, 1) 32%, rgba(255, 219, 15, 1) 60%, rgba(228, 192, 0, 1) 51%, rgba(186, 171, 82, 1) 76%, rgba(228, 192, 0, 1) 71%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  box-sizing: border-box;
+  margin-bottom: 2em;
+  margin-top: 2em;
+  border-radius: 0px;
+  
+}
+.texte-la-baza {
+  display: flex;
+  gap:7em;
+  text-align: center;
+}
+.element-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  color: #000000;
+  font-weight: bolder;
+  font-size: 2rem;
+}
+
+@media (max-width: 768px) {
+  .banner-cu-texte {
+    padding: 0.8em 0.5em;
+  }
+
+  .texte-la-baza {
+    gap: 0.5em;
+  }
+
+  .element-banner {
+    font-size: 1.2rem;
+  }
+
+  .element-banner svg {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+
+/* FINAL BANNER SVG-uri-curaj pasiune excelenta *
+
+
+/* SVG  DETALIAT (iconite CASE APARTAMENTE BIROURI) */
+.svg-container {
+  display: flex;
+  flex-direction: row;   /* Schimbat din column în row */
+  justify-content: center; /* Centrează pe orizontală */
+  align-items: center;     /* Centrează vertical (opțional) */
+  gap: 4em;
+  padding: 0.2em;
+  border-radius: 0px;
+  margin-top: 1em;
+  margin-bottom: 0em; 
+}
+ .svg-item {
+      text-align: center;
+    }
+.svg-item svg {
+      width: 4rem;
+      height: 4rem;
+      transition: transform 0.3s;
+      border: 0px solid#ffffff;
+      border-radius: 10px;
+      }
+ .svg-item a:hover svg {
+      transform: scale(1.3);
+    }
+.svg-caption {
+  margin-top: 0.1em;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #000000;
+  text-align: center;
+  letter-spacing: 0.1rem; 
+}
+
+@media (max-width: 768px) {
+  .svg-container {
+    flex-direction: column; /* Schimbă din row în column */
+    gap: 1em;               /* Mai puțin spațiu între iconițe */
+    padding: 1em;
+  }
+
+  .svg-item svg {
+    width: 6rem;
+    height: 6rem;
+  }
+
+  .svg-caption {
+    font-size: 1rem;
+  }
+
+}
+
+
+/*FINAL SVG PORTOFOLIU DETALIAT */
+
+
+/* ICONITE UMPLERE INSTAGRAM FACEBOOK WHATSAPP DE LA FINALUL PAGINILOR CU APARTAMENTE CASE SI BIROURI */ 
+ul {
+  list-style: none;
+}
+
+.example-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.example-2 .icon-content {
+  margin: 0 10px;
+  position: relative;
+  margin-top: 2.3em;
+}
+.example-2 .icon-content .tooltip {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 10px;
+  opacity: 0;
+  visibility: hidden;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+.example-2 .icon-content:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+  top: -50px;
+}
+.example-2 .icon-content a {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: #4d4d4d;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+.example-2 .icon-content a:hover {
+  box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
+}
+.example-2 .icon-content a svg {
+  position: relative;
+  z-index: 1;
+  width: 30px;
+  height: 30px;
+}
+.example-2 .icon-content a:hover {
+  color: white;
+}
+.example-2 .icon-content a .filled {
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: #000;
+  transition: all 0.3s ease-in-out;
+}
+.example-2 .icon-content a:hover .filled {
+  height: 100%;
+}
+
+.example-2 .icon-content a[data-social="whatsapp"] .filled,
+.example-2 .icon-content a[data-social="whatsapp"] ~ .tooltip {
+  background-color: #128c7e;
+}
+
+.example-2 .icon-content a[data-social="facebook"] .filled,
+.example-2 .icon-content a[data-social="facebook"] ~ .tooltip {
+  background-color: #3b5998;
+}
+.example-2 .icon-content a[data-social="instagram"] .filled,
+.example-2 .icon-content a[data-social="instagram"] ~ .tooltip {
+  background: linear-gradient(
+    45deg,
+    #405de6,
+    #5b51db,
+    #b33ab4,
+    #c135b4,
+    #e1306c,
+    #fd1f1f
+  );
+}
+.example-2 .icon-content a[data-social="youtube"] .filled,
+.example-2 .icon-content a[data-social="youtube"] ~ .tooltip {
+  background-color: #ff0000;
+}
+
+/*FINAL ICONITE UMPLERE INSTAGRAM FACEBOOK WHATSAPP DE LA FINALUL PAGINILOR CU APARTAMENTE CASE SI BIROURI */ 
+
+
+
+/* Stiluri TEXTE*/
+.section-title {
+  text-align: left;
+  z-index: 2;
+  position: relative;
+  margin: 0 1em;
+  letter-spacing: 0em;
+  word-spacing: 0.5em;
+}
+
+/* 📱 Responsive pentru telefoane */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1rem;
+    text-align: start;
+    margin: 0.5em 0.5em;
+  }
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 300; /* echivalent cu 'lighter' dar mai controlabil */
+  text-align: center;
+  margin-bottom: 1em;
+  color: #2c3e50;
+  letter-spacing: 0.05em;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  text-shadow: 2px 2px 4px rgba(44, 62, 80, 0.2); /* umbră mai vizibilă */
+  display: block;
+  padding-bottom: 0.3em;
+  transition: transform 0.3s ease, letter-spacing 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem; /* font mai mic pe mobil */
+    margin-bottom: 0.8em; /* puțin mai mică distanța */
+    padding-bottom: 0.2em;
+    letter-spacing: 0.03em; /* mai puțină spațiere între litere */
+  }
+}
+
+
+h2 {
+  text-align: center;
+  font-weight: lighter;
+}
+h3{
+  align-content: center;
+  font-size: 1rem;
+}
+
+
+/* FINAL STILURI TEXTE*/
+
+
+
+ /* BUTON BUTON CARD-URI SHORTCUT SERVICII INDEX.HTML */
+
+.buton-auriu {
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 10px 20px (); /* <- Notă: Parantezele goale aici ar trebui eliminate */
+  padding-block: 0.5rem;
+  padding-inline: 1.25rem;
+  background-color: #707070;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  gap: 0.625em;
+  font-weight: bold;
+  border: 0px solid #707070;
+  outline: none;
+  overflow: hidden;
+  font-size:1.1rem;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.buton-auriu:hover .icon {
+  transform: translate(4px);
+}
+
+.buton-auriu:hover::before {
+  animation: shine 1.5s ease-out infinite;
+}
+
+.buton-auriu::before {
+  content: "";
+  position: absolute;
+  width: 6.25em;
+  height: 100%;
+  background-image: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0) 70%
+  );
+  top: 0;
+  left: -6.25em;
+  opacity: 0.6;
+}
+
+@keyframes shine {
+  0% {
+    left: -6.25em;
+  }
+
+  60% {
+    left: 100%;
+  }
+
+  to {
+    left: 100%;
+  }
+}
+
+/* FINAL BUTON CARD-URI SHORTCUT SERVICII INDEX.HTML */
+
+
+
+
+
+
+/* --- BODY--- */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+/* --- FINAL BODY--- */
+
+
+ 
+/* FOOTER */
+footer {
+     background: linear-gradient(360deg, #2e2e2e, #4a4646,#393833);
+    color: white;
+    padding: 0.4em 0.4em;
+    font-family: Arial, sans-serif;
+    margin-top: 4em;
+  }
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+.footer-left,
+  .footer-center,
+  .footer-right {
+    flex: 1;
+    min-width: 15em;
+    margin-bottom:0em;
+  }
+.footer-logo {
+    width:6em;
+    height: auto;
+    margin-bottom: 0.1em;
+  }
+.footer-left p {
+    margin: 0.2em 0;
+  }
+.social-icons {
+    margin-top: 0.6em;
+    display: flex;
+    gap: 0.5em;
+  }
+.social-icons img {
+    width: 5em;
+    height: 5em;
+  }
+.footer-center {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  align-items: center;   /* Centrează pe orizontală conținutul */
+  margin-top: 1em;
+}
+.footer-center a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    text-align: right;    /* Centrează textele */
+  }
+.footer-center a:hover {
+    color: #fcd65b;
+  }
+
+  .footer-right {
+    text-align: right;
+  }
+.footer-center,
+  .footer-left,
+.footer-right {
+  font-size: 0.8rem; 
+  letter-spacing: 0.1rem;
+}
+ @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+    }
+
+    .footer-right {
+      text-align: center;
+    }
+  }
+
+/*FINAL FOOTER*/
+
+
+
+
+
+
+    *, *::before, *::after {
+  box-sizing: border-box;
+}
+body {
+  overflow-x: hidden;
+}
+
+
+
+
+ 
+
+
+/* LOADIN SCREEN styling */
+.loader {
+  width: 3.75em;
+  height: 3.75em;
+  border: 10px solid #00000050;
+  border-top-color: #ffffff;
+  animation: spin013151 1s linear infinite;
+  border-radius: 100%;
+}
+
+/* Animation */
+@keyframes spin013151 {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Fullscreen overlay for loading */
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #e4c000; /* sau transparent dacă vrei */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* deasupra tuturor */
+}
+/* LOADIN SCREEN styling */
+
+
+
+.vertical-line11 {
+  width: 3px;
+  background-color: #000000; /* sau altă culoare dorită */
+  height: 18em; /* va umple cât are nevoie */
+  margin-left: 0em;
+  
+}
+
+
+
+
+/* Butonul de activare */
+
+
